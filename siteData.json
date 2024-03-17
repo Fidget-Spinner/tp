@@ -7,11 +7,11 @@
       "headings": {
         "about-us": "About Us",
         "project-team": "Project team",
-        "john-doe": "John Doe",
-        "jane-doe": "Jane Doe",
-        "johnny-doe": "Johnny Doe",
-        "jean-doe": "Jean Doe",
-        "james-doe": "James Doe"
+        "ken-jin": "Ken Jin",
+        "lifu": "Lifu",
+        "jules": "Jules",
+        "jia-jie": "Jia Jie",
+        "jae-geun": "Jae Geun"
       },
       "headingKeywords": {}
     },
@@ -107,20 +107,24 @@
       "src": "UserGuide.md",
       "title": "User Guide",
       "headings": {
-        "ab-3-user-guide": "AB-3 User Guide",
-        "quick-start": "Quick start",
+        "cca-manager-user-guide-i": "CCA Manager User Guide ℹ️",
+        "quick-start": "Quick start 😊",
+        "quick-reference": "Quick Reference",
+        "further-help": "Further Help",
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
-        "adding-a-person-add": "Adding a person: add",
-        "listing-all-persons-list": "Listing all persons : list",
-        "editing-a-person-edit": "Editing a person : edit",
-        "locating-persons-by-name-find": "Locating persons by name: find",
-        "deleting-a-person-delete": "Deleting a person : delete",
-        "clearing-all-entries-clear": "Clearing all entries : clear",
-        "exiting-the-program-exit": "Exiting the program : exit",
+        "adding-a-person-add": " Adding a person: add",
+        "listing-all-persons-list": " Listing all persons : list",
+        "editing-a-person-edit": " Editing a person : edit",
+        "locating-persons-by-name-find": " Locating persons by name: find",
+        "deleting-a-person-delete": " Deleting a person : delete",
+        "clearing-all-entries-clear": " Clearing all entries : clear",
+        "exiting-the-program-exit": " Exiting the program : exit",
         "saving-the-data": "Saving the data",
         "editing-the-data-file": "Editing the data file",
-        "archiving-data-files-coming-in-v2-0": "Archiving data files [coming in v2.0]",
+        "assign-roles-to-contacts-coming-in-v1-2": "Assign roles to contacts[coming in v1.2]",
+        "identify-the-exco-members-coming-in-v1-2": "Identify the exco members[coming in v1.2]",
+        "form-groups-of-contacts-coming-in-v1-2": "form groups of contacts[coming in v1.2]",
         "faq": "FAQ",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
@@ -136,10 +140,50 @@
       "headingKeywords": {}
     },
     {
+      "src": "team/alphajae11.md",
+      "title": "Jae Geun's Project Portfolio Page",
+      "headings": {
+        "project-cca-manager": "Project: CCA Manager"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/chuahjiajie.md",
+      "title": "Jia Jie's Project Portfolio Page",
+      "headings": {
+        "project-cca-manager": "Project: CCA Manager"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/fidget-spinner.md",
+      "title": "Ken Jin's Project Portfolio Page",
+      "headings": {
+        "project-cca-manager": "Project: CCA Manager"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "team/johndoe.md",
       "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/juliapoo.md",
+      "title": "Jule's Project Portfolio Page",
+      "headings": {
+        "project-cca-manager": "Project: CCA Manager"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/lifhoshi.md",
+      "title": "Lifu's Project Portfolio Page",
+      "headings": {
+        "project-cca-manager": "Project: CCA Manager"
       },
       "headingKeywords": {}
     },
