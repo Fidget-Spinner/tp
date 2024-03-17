@@ -1,19 +1,23 @@
 package seedu.address.model.person;
 
-import seedu.address.commons.util.ToStringBuilder;
-import seedu.address.model.tag.Tag;
-
 import java.util.List;
 import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import seedu.address.commons.util.ToStringBuilder;
+import seedu.address.model.tag.Tag;
+
+
 /**
- * Tests that a {@code Person}'s {@code Name} matches any of the keywords given.
+ * Tests that a {@code Person}'s {@code tags} matches any of the keywords given.
  */
 public class TagContainsKeywordPredicate implements Predicate<Person> {
     private final List<Tag> tags;
 
+    /**
+     * Returns a TagContainsKeywordsPredicate object by taking a list of the tag names.
+     */
     public TagContainsKeywordPredicate(List<String> keywords) {
 
         this.tags = keywords.stream().map(Tag::new).collect(Collectors.toList());

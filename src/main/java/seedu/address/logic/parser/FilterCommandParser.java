@@ -2,14 +2,14 @@
 // CS2103T teaching team for this.
 package seedu.address.logic.parser;
 
-import seedu.address.logic.commands.FilterCommand;
-import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.person.NameContainsKeywordsPredicate;
-import seedu.address.model.person.TagContainsKeywordPredicate;
+import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
 import java.util.Arrays;
 
-import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import seedu.address.logic.commands.FilterCommand;
+import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.model.person.TagContainsKeywordPredicate;
+
 
 /**
  * Parses input arguments and creates a new FilterCommand object
