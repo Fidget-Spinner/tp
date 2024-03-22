@@ -19,6 +19,7 @@ Class Email
 Class Name
 Class Phone
 Class Tag
+Class Cca
 
 Class I #FFFFFF
 }
@@ -42,12 +43,14 @@ Person *--> Phone
 Person *--> Email
 Person *--> Address
 Person *--> "*" Tag
+Person *--> "*" Cca
 
 Person -[hidden]up--> I
 UniquePersonList -[hidden]right-> I
 
 Name -[hidden]right-> Phone
-Phone -[hidden]right-> Address
+Phone -[hidden]right-> Cca
+Cca -[hidden]right-> Address
 Address -[hidden]right-> Email
 
 ModelManager --> "~* filtered" Person
