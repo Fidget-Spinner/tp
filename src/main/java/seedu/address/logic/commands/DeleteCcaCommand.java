@@ -69,21 +69,21 @@ public class DeleteCcaCommand extends Command {
         // Delete their roles
         ArrayList<Cca> removedCcas = new ArrayList<>();
         affectedPeople
-            .forEach(affectedPerson -> {
-                Set<Cca> updatedCca = affectedPerson
-                    .getCcas()
-                    .stream()
-                    .filter(c -> {
-                        boolean isToDelete = ccas.contains(c);
-                        if (isToDelete) {
-                            removedCcas.add(c);
-                        }
-                        return !isToDelete;
-                    })
-                    .collect(Collectors.toSet());
-                model.setPerson(affectedPerson, affectedPerson.replaceCca(updatedCca));
-                result.append(String.format("Person affected: $%s\n", affectedPerson.getName()));
-            });
+        .forEach(affectedPerson -> {
+            Set<Cca> updatedCca = affectedPerson
+            .getCcas()
+            .stream()
+            .filter(c -> {
+                boolean isToDelete = ccas.contains(c);
+                if (isToDelete) {
+                    removedCcas.add(c);
+                }
+                return !isToDelete;
+            })
+            .collect(Collectors.toSet());
+            model.setPerson(affectedPerson, affectedPerson.replaceCca(updatedCca));
+            result.append(String.format("Person affected: $%s\n", affectedPerson.getName()));
+        });
         // Remove Ccas
         removedCcas.stream().distinct().forEach(model::deleteCca);
         
