@@ -5,12 +5,16 @@ package seedu.address.logic.commands;
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_CCA;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.person.CcaContainsKeywordPredicate;
 import seedu.address.model.person.Person;
+import seedu.address.model.cca.Cca;
 
 
 /**
@@ -23,7 +27,7 @@ public class DeleteCcaCommand extends Command {
     public static final String MESSAGE_USAGE = COMMAND_WORD
             + ": Deletes a CCA and all its associated members from your contacts."
             + "Parameters: "
-            + "[" + PREFIX_CCA + "AMOUNT]...\n"
+            + "[" + PREFIX_CCA + "CCA]...\n"
             + "Example: " + COMMAND_WORD + " "
             + PREFIX_CCA + "NUS Cycling ";
 
@@ -50,17 +54,45 @@ public class DeleteCcaCommand extends Command {
     public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
         model.updateFilteredPersonList(this.ccas);
-        List<Person> lastShownList = model.getFilteredPersonList();
         StringBuilder result = new StringBuilder();
-        result.append(String.format("Deleting CCA(s) %s and all its members:", this.ccas));
+        result.append(String.format("Deleting CCA(s) %s tags from all its members:\n", this.ccas));
 
-        for (Person personToDelete : lastShownList) {
-            // TODO: bug: why does this not delete everything in one go?
-            model.deletePerson(personToDelete);
-            result.append(String.format("Deleted Person: $%s\n", personToDelete.getName()));
-        }
+        // We have to essentially clone the list
+        // because as `model.setPerson` is called,
+        // the ObservableList gets updated.
+        // This causes some people to be skipped.
+        List<Person> affectedPeople = model
+            .getFilteredPersonList()
+            .stream()
+            .collect(Collectors.toList());
 
-        model.updateFilteredPersonList(this.ccas);
+        // Delete their roles
+        ArrayList<Cca> removedCcas = new ArrayList<>();
+        affectedPeople
+            .forEach(affectedPerson -> {
+                Set<Cca> updatedCca = affectedPerson
+                    .getCcas()
+                    .stream()
+                    .filter(c -> {
+                        boolean isToDelete = ccas.contains(c);
+                        if (isToDelete) {
+                            removedCcas.add(c);
+                        }
+                        return !isToDelete;
+                    })
+                    .collect(Collectors.toSet());
+                model.setPerson(affectedPerson, affectedPerson.replaceCca(updatedCca));
+                result.append(String.format("Person affected: $%s\n", affectedPerson.getName()));
+            });
+        // Remove Ccas
+        removedCcas.stream().distinct().forEach(model::deleteCca);
+        
+        // Update filteredlist to display the same people
+        model.updateFilteredPersonList(p -> affectedPeople
+            .stream()
+            .anyMatch(p::isSamePerson)
+        );
+
         return new CommandResult(result.toString());
     }
 
