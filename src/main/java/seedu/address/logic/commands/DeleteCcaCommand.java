@@ -86,7 +86,7 @@ public class DeleteCcaCommand extends Command {
         });
         // Remove Ccas
         removedCcas.stream().distinct().forEach(model::deleteCca);
-        
+
         // Update filteredlist to display the same people
         model.updateFilteredPersonList(p -> affectedPeople
             .stream()
