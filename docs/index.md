@@ -19,5 +19,5 @@
 **Acknowledgements**
 
 * Libraries used: [JavaFX](https://openjfx.io/), [Jackson](https://github.com/FasterXML/jackson), [JUnit5](https://github.com/junit-team/junit5)
-* All credits to the original AddressBook-Level 3 authors. Part of the
+* All credits to the original AddressBook-Level 3 authors. Part of
   [SE-EDU](https://se-education.org/).
