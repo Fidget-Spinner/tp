@@ -929,6 +929,11 @@ _Details coming soon ..._
 
 ## Common Issues
 
+1. I updated CCA Manager and now nothing shows up in my contact list.
+   Solution: delete your `data` folder and re-launch CCA Manager. 
+2. My [_Java_](#glossary) does not open CCA Manager, what's up with that?
+   Solution: Make sure you're using Java 11 or a more recent version. We can't guarantee anything lower will work.
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## Known issues
