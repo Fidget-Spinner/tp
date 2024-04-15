@@ -17,6 +17,8 @@ _{ list here sources of all reused/adapted ideas, code, documentation, and third
 
 1. CS2103T AB3 Source Code
 2. https://uibakery.io/regex-library/phone-number-java - Regarding Phone Validation Java Regex
+3. Java documentation for BigDecimal https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html.
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## **Setting up, getting started**
