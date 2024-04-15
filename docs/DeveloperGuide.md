@@ -280,8 +280,8 @@ CCA members. An example command is ``split a/4.00 c/NUS Cycling``. Which means
 
 1. Identify all members belonging to that CCA.
 2. Count the number of members in 1., and split the amount equally.
-   * Note: rounding errors may occur here. So we should use `double` in Java
-     for higher precision and also round to nearest 2 d.p.
+   * Note: rounding errors may occur here. So we should use `BigDecimal` in Java
+     for higher precision.
 3. Add the split amount to each member's "payment owed" field
 
 
