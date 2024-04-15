@@ -88,8 +88,7 @@ public class DeleteCcaCommand extends Command {
                     .filter(c -> !ccas.contains(c))
                     .collect(Collectors.toSet());
                 model.setPerson(affectedPerson, affectedPerson
-                        .replaceCca(updatedCca)
-                        .replaceRoles(Collections.emptySet()));
+                        .replaceCca(updatedCca));
                 result.append(String.format("Person affected: %s\n", affectedPerson.getName()));
             });
 
