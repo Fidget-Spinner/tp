@@ -427,15 +427,8 @@ $$
         ^{\text{\colorbox{lavender}{Role(s)}}}
 }
 \quad
-\underset{
-    \substack{
-        \text{\color{red}{Optional}} \\
-        \text{\color{red}{can have multiple}}
-    }
-}{
-    \overbrace{\texttt{\colorbox{plum}{c/}\color{green}{NUS Cycling}}}
-        ^{\text{\colorbox{plum}{CCA(s)}}}
-}
+\overbrace{\texttt{\colorbox{plum}{c/}\color{green}{NUS Cycling}}}
+    ^{\text{\colorbox{plum}{CCA(s)}}}
 $$
 
 <box type="info"><md>
