@@ -80,15 +80,6 @@ public class Person {
         return new Person(name, phone, email, address, newRoles, newCcas, amount, attendance, sessions, metadata);
     }
 
-    /**
-     * Replaces {@code Person.roles} with another {@code Set<Role>}
-     * @param newRoles New roles to replace with.
-     * @return a new Person.
-     */
-    public Person replaceRoles(Set<Role> newRoles) {
-        return new Person(name, phone, email, address, newRoles, ccas, amount, attendance, sessions, metadata);
-    }
-
     public Name getName() {
         return name;
     }
