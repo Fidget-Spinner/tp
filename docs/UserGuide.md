@@ -427,8 +427,14 @@ $$
         ^{\text{\colorbox{lavender}{Role(s)}}}
 }
 \quad
-\overbrace{\texttt{\colorbox{plum}{c/}\color{green}{NUS Cycling}}}
-    ^{\text{\colorbox{plum}{CCA(s)}}}
+\underset{
+    \substack{
+        \text{\color{red}{can have multiple}}
+    }
+}{
+    \overbrace{\texttt{\colorbox{plum}{c/}\color{green}{NUS Cycling}}}
+        ^{\text{\colorbox{plum}{CCA(s)}}}
+}
 $$
 
 <box type="info"><md>
@@ -443,12 +449,12 @@ The people who will be listed are people who are:
 ##### Examples:
 
 * `filter c/NUS Cycling`
-* `filter c/NUS Cycling r/classmates`
-* `filter c/NUS Cycling r/classmates r/colleagues`
+* `filter c/NUS Cycling r/Logistics`
+* `filter c/NUS Cycling r/Logistics r/Outreach`
 
 ##### Outcome:
 
-For `filter c/NUS Cycling r/classmates r/colleagues`:
+For `filter c/NUS Cycling r/Logistics r/Outreach`:
 <center>
 <img width="700px" src="images/UG-Basics/filter-output-1.png">
 </center>
@@ -558,7 +564,6 @@ $$
 
 * `add n/John Doe p/98765432 e/johnd@example.com a/6 Sin Ming #01-01`
 * `add n/John Doe p/98765432 e/johnd@example.com a/6 Sin Ming #01-01 c/NUS Cycling c/NUS Origami`
-* `add n/John Doe p/98765432 e/johnd@example.com a/6 Sin Ming #01-01 r/Treasurer r/Logistics`
 * `add n/John Doe p/98765432 e/johnd@example.com a/6 Sin Ming #01-01 d/Manages money`
 
 ##### Outcome:
@@ -714,7 +719,7 @@ Roles.
 Suppose we start with this list of people displayed in the **Results Box**.
 
 <center>
-<img src="images/editcommandoutcome1.png" >
+<img src="images/listcommandoutcome.png" >
 </center>
 
 We then run the following command:
@@ -792,7 +797,7 @@ For `assign 1 r/Treasurer`
 ##### Possible Failures:
 
 - The [_Index of person_](#glossary) must be within range. For example, it must be greater than 0, and smaller than the length of the currently displayed list of people. This is because the [_Index of person_](#glossary) will be used to indicate which person to operate the command on.
-- If the CCA is `nil` (for instance, the command you ran is `assign 1 r/nil`), the command will error out.
+- If the Role is `nil` (for instance, the command you ran is `assign 1 r/nil`), the command will error out.
 
 <box type="tip"><md>
 **Tip**: If you intend to remove all roles for a person, try running `edit <index of person> r/nil`, (see the [`edit` command](#editing-a-person-edit)). 
