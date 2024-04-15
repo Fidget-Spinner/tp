@@ -1009,7 +1009,7 @@ This is because a person without a CCA should not have any roles.
 
 Suppose we start with this list of people displayed in the **Results Box**.
 
-<img src="images/UG-Basics/outcomeCca_deleteBefore.png" >
+<img src="images/listcommandoutcome.png" >
 
 We then run the following command:
 
@@ -1019,7 +1019,7 @@ cca_delete c/NUS Cycling
 
 <img src="images/UG-Basics/outcomeCca_deleteAfter1.png" >
 
-Notice that the CCA of the person `Caleb Hugh` has been removed.
+Notice that the CCA of the people in our list has been removed.
 
 ##### Possible Failures:
 
